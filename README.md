@@ -38,6 +38,16 @@ Users can quickly search for students within the system by using various criteri
 **Database:** MySQL 
 
 ## Demo
+1) **The Face Recognition Button will not work when there is no face present in the records :**
+
+    a) If the Faces folder is not present in the main folder.
+
+
+    b) If the Faces folder does not contain any face.
+
+    c) If you have added images inside the Faces folder and not pressed the train button after adding the images.
+
+2) Press the **escape key** to close the training and face recognition window.
 
 [![Installation and Demo of Face Recognition Attendance System. Full code in Python.](https://ytcards.demolab.com/?id=jCzwcGH10XM&title=Installation+and+Demo+of+Face+Recognition+Attendance+System.+Full+code+in+Python.&lang=en&timestamp=1728498600&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=250&border_radius=5&duration=653 "Installation and Demo of Face Recognition Attendance System. Full code in Python.")]([https://youtu.be/jCzwcGH10XM?si=6Xffrpw5f5WXF8hz])
 
@@ -74,6 +84,7 @@ You need to install some libraries using the command terminal so that the code r
 5) MySQL Connector:
    
     `pip install mysql-connector-python`
+   
    
 
     
