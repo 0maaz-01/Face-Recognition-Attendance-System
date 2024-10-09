@@ -39,7 +39,7 @@ Users can quickly search for students within the system by using various criteri
 
 ## Demo
 
-Insert gif or link to demo
+[![Installation and Demo of Face Recognition Attendance System. Full code in Python.](https://ytcards.demolab.com/?id=jCzwcGH10XM&title=Installation+and+Demo+of+Face+Recognition+Attendance+System.+Full+code+in+Python.&lang=en&timestamp=1728498600&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=250&border_radius=5&duration=653 "Installation and Demo of Face Recognition Attendance System. Full code in Python.")]([https://youtu.be/jCzwcGH10XM?si=6Xffrpw5f5WXF8hz])
 
 
 ## Features
@@ -55,6 +55,10 @@ Insert gif or link to demo
 
 
 ## Installation
+
+[![Installation and Demo of Face Recognition Attendance System. Full code in Python.](https://ytcards.demolab.com/?id=jCzwcGH10XM&title=Installation+and+Demo+of+Face+Recognition+Attendance+System.+Full+code+in+Python.&lang=en&timestamp=1728498600&background_color=%230d1117&title_color=%23ffffff&stats_color=%23dedede&max_title_lines=1&width=250&border_radius=5&duration=653 "Installation and Demo of Face Recognition Attendance System. Full code in Python.")]([https://youtu.be/jCzwcGH10XM?si=6Xffrpw5f5WXF8hz])
+
+
 You need to install some libraries using the command terminal so that the code runs smoothly on your device. You can use the given commands and run it on your command terminal.
 
 1) OpenCV:
