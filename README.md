@@ -89,17 +89,17 @@
 
 ### 1) OpenCV:
 
-    ### `pip install opencv-python`
+    pip install opencv-python
 ### 2) Pillow:
    
-    `pip install Pillow`
+    pip install Pillow
 
 ### 3) Numpy:
     
-    `pip install numpy`
+    pip install numpy
 ### 4) MySQL Connector:
    
-    `pip install mysql-connector-python`
+    pip install mysql-connector-python
    
    
 
