@@ -13,7 +13,14 @@
 
 ## Resources 
 ### 1) **Tkinter** library for creating Graphical User Interface (GUI).
+#### Front page  
    ![image at](https://github.com/0maaz-01/Face-Recognition-Attendance-System/blob/main/Images/21.png)
+
+#### Student Deails Page
+   ![image at](https://github.com/0maaz-01/Face-Recognition-Attendance-System/blob/main/Images/Details%20Page.png)
+
+#### Attendance Page 
+   ![image at](https://github.com/0maaz-01/Face-Recognition-Attendance-System/blob/main/Images/Attendance%20Page.png)
 
 ### 2) **OpenCV** library for face detection and recognition using:     
 ### a) **Haarcascade** algorithm for face detection.
