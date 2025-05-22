@@ -109,6 +109,55 @@
     pip install mysql-connector-python
    
    
+### Setting up databse :
+1) Install MySQL Workbench by watching the installation part of this video -- https://www.youtube.com/watch?v=5OdVJbNCSso
+
+   Do everything same as done in this video but install the latest versions.
+
+3) Find these lines in the code and replace the password in this line with your password :
+
+     a) For database that has the details of the user.
+     
+           conn = mysql.connector.connect(host="localhost", username="root", password="5moha@8234mo!#Ham", database="credentials")
+    
+    b) For database that contains the details of the students.
+           
+           conn = mysql.connector.connect(host = "localhost", username = "root", password = "5moha@8234mo!#Ham", database = "frs")
+
+3) Open Your MySQL WorkBench and Run these lines one by one on it.
+
+a) `create database credentials;`
+
+b) `use credentials;`
+
+c) `CREATE TABLE details (
+        Email varchar(50) NOT NULL,
+        First_Name varchar(40) DEFAULT NULL,
+        Last_Name varchar(40) DEFAULT NULL,
+        Mobile varchar(15) DEFAULT NULL,
+        Password varchar(100) DEFAULT NULL,
+        PRIMARY KEY (Email)
+  );`
+  
+d) `create database frs;`
+
+e) `use frs;`
+
+
+f) `CREATE TABLE student (
+         StudentID varchar(20) DEFAULT NULL,
+         Name varchar(50) DEFAULT NULL,
+         Department varchar(50) DEFAULT NULL,
+         Course varchar(50) DEFAULT NULL,
+         Semester varchar(50) DEFAULT NULL,
+         Year year DEFAULT NULL,
+         Mobile varchar(50) DEFAULT NULL,
+         Email varchar(50) DEFAULT NULL,
+         School varchar(50) DEFAULT NULL,
+         Parent_Name varchar(50) DEFAULT NULL,
+         DOB date DEFAULT NULL,
+         Address varchar(100) DEFAULT NULL
+)`
 
     
 ## License
