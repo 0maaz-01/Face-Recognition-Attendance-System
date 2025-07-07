@@ -2,7 +2,7 @@ import cx_Freeze
 import sys
 import os
 
-base = None
+base = None 
 if sys.platform == "win32":
     base = "Win32GUI"
 
