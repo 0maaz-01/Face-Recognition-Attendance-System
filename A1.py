@@ -5,7 +5,7 @@ import First
 from PIL import Image, ImageTk
 
 class Register:
-    def __init__(self, window):
+    def __init__(self, window): 
         self.window = window
 
 
