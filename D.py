@@ -5,7 +5,7 @@ import os
 import csv 
 from tkinter import filedialog
 from PIL import Image, ImageTk
-
+ 
 my_data = []
 class Attendance:
     def __init__(self, window):
