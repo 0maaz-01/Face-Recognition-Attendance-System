@@ -5,7 +5,7 @@ import mysql.connector
 
 class Login:
     def __init__(self, window):
-        self.window = window
+        self.window = window 
 
         def sign_up():
             from A1 import Register
