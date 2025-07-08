@@ -4,7 +4,7 @@ import mysql.connector
 import First
 from PIL import Image, ImageTk
 
-class Register:
+class Register: 
     def __init__(self, window):  
         self.window = window
 
