@@ -5,7 +5,7 @@ import mysql.connector
 import cv2
 from PIL import Image, ImageTk
  
-class Student: 
+class Student:  
     def __init__(self, window):
         self.window = window
         self.window.title("Face Recognition System")
