@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import messagebox
 import mysql.connector
-import First
+import First 
 from PIL import Image, ImageTk
 
 class Register: 
