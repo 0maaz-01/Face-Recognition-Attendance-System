@@ -3,7 +3,7 @@ from D import Attendance
 import os
 import cv2
 from PIL import Image
-from numpy import *
+from numpy import * 
 from tkinter import messagebox 
 import mysql.connector
 from datetime import datetime  
