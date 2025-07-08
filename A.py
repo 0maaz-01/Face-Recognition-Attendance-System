@@ -2,7 +2,7 @@ from tkinter import *
 from D import Attendance
 import os
 import cv2
-from PIL import Image
+from PIL import Image 
 from numpy import * 
 from tkinter import messagebox 
 import mysql.connector
