@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 from tkinter import messagebox
-import mysql.connector
+import mysql.connector 
 import cv2
 from PIL import Image, ImageTk
  
