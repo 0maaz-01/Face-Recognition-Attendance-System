@@ -37,6 +37,32 @@ class Login:
                        background="#008080", activebackground="#ffdab9", foreground="white", relief=RAISED, bd=10)
         login.place(x=210, y=475)
 
+  
+    def login(self):
+        if self.username.get() == "" or self.password.get() == "":
+            messagebox.showerror("Error", "Perhaps you forgot to enter Username or Password")
+        else:
+            conn = mysql.connector.connect(host="localhost", username="root", password="5moha@8234mo!#Ham",
+                                           database="credentials")
+            my_cursor = conn.cursor()
+            my_cursor.execute("select * from details where Email = %s and Password = %s",
+                              (self.username.get(),
+                               self.password.get()
+                               ))
+            row = my_cursor.fetchone()
+            conn.close()
+
+            if row != None:
+                self.new_window = Toplevel(self.window)
+                self.new_window.geometry("1530x800+-5+0")
+                self.new_window.config(background="#008080")
+                from A import Face_Recognition_System
+                self.new =  Face_Recognition_System(self.new_window)
+                self.window.withdraw()
+
+            else:
+                messagebox.showerror("Error", "Invalid Username and Password.")
+
 
 
 
