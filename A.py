@@ -105,6 +105,28 @@ class Face_Recognition_System:
 
 
     def face_recog(self):
+
+        def recognize(img, clf, faceCascade):
+            coord = draw_boundray(img, faceCascade, 1.1, 10, (255, 25, 255), "Face", clf)
+            return img
+
+        faceCascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
+        clf = cv2.face.LBPHFaceRecognizer_create()
+        clf.read("classifire.xml")
+
+        videoCap = cv2.VideoCapture(0)
+
+        while True:
+            ret, img = videoCap.read()
+            img = recognize(img, clf, faceCascade)
+            cv2.imshow("Face Detector", img)
+
+            if cv2.waitKey(1) == 27:
+                break
+        videoCap.release()
+        cv2.destroyAllWindows()
+
+     
         def draw_boundray(img, classifier, scaleFactor, minNeighbors, color, text, clf):
             gray_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
             featuers = classifier.detectMultiScale(gray_image, scaleFactor, minNeighbors)
@@ -139,28 +161,6 @@ class Face_Recognition_System:
 
                 coord = [x, y, w, y]
             return coord
-
-
-        def recognize(img, clf, faceCascade):
-            coord = draw_boundray(img, faceCascade, 1.1, 10, (255, 25, 255), "Face", clf)
-            return img
-
-        faceCascade = cv2.CascadeClassifier("haarcascade_frontalface_default.xml")
-        clf = cv2.face.LBPHFaceRecognizer_create()
-        clf.read("classifire.xml")
-
-        videoCap = cv2.VideoCapture(0)
-
-        while True:
-            ret, img = videoCap.read()
-            img = recognize(img, clf, faceCascade)
-            cv2.imshow("Face Detector", img)
-
-            if cv2.waitKey(1) == 27:
-                break
-        videoCap.release()
-        cv2.destroyAllWindows()
-
 
 
 
