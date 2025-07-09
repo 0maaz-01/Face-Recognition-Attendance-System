@@ -142,6 +142,30 @@ class Attendance:
             self.fetch_data(my_data)
 
 
+    def export_csv(self):
+        try:
+            if len(my_data) < 1:
+                messagebox.showerror("No Data", "No Data found to export", parent = self.window)
+                return False
+            file_name = filedialog.asksaveasfilename(initialdir = os.getcwd(), title = "Open CSV ", filetypes = (("CSV File","*csv"),("ALL Files","*.*")), parent = self.window)
+            with open(file_name, "w", newline = "") as myfile:
+                write_new_file = csv.writer(myfile, delimiter = ",")
+                for i in my_data:
+                    write_new_file.writerow(i)
+                messagebox.showinfo("File succefully saved","Your data was exported to " + os.path.basename(file_name) + " successfully")
+        except Exception as es:
+            messagebox.showerror("Error", f"Due to {str(es)}", parent=self.window)
+
+
+    def get_cursor(self, event = ""):
+        cursor_row = self.attendance_table.focus()
+        content = self.attendance_table.item(cursor_row)
+        rows = content['values']
+        self.student_id.set(rows[0])
+        self.name.set(rows[1])
+        self.date.set(rows[2])
+        self.time.set(rows[3])
+        self.attendance.set(rows[4])
 
 
     def reset(self):
