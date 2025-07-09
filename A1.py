@@ -55,6 +55,33 @@ class Register:
         previous = Button(self.window, image = self.arrow, background="#008080", borderwidth=0, activebackground = "#008080", command = self.back)#"#ffdab9")
         previous.place(x = 0, y = 0)
 
+    def register(self):
+        if self.password.get() != self.conf_password.get() :
+            messagebox.showerror("Error", "Passwords do not match.")
+        elif self.first_name.get() == "" or self.last_name.get() == "" or len(self.mobile.get()) < 10 or len(self.email.get()) < 10 or self.password.get() == "" or self.conf_password.get() == "":
+            messagebox.showerror("Error", "You left one or more fields empty. All fields are mandatory.")
+        else:
+            conn = mysql.connector.connect(host="localhost", username="root", password="5moha@8234mo!#Ham",
+                                           database="credentials")
+            my_cursor = conn.cursor()
+            query = "select * from details where Email = %s"
+            val = (self.email.get(),)
+            my_cursor.execute(query, val)
+
+            row = my_cursor.fetchone()
+            if row != None:
+                messagebox.showerror("Error","User already exists.Try with another email")
+            else:
+                my_cursor.execute("insert into details values (%s,%s,%s,%s,%s)",
+                                                                            (self.email.get(),
+                                                                                    self.first_name.get(),
+                                                                                    self.last_name.get(),
+                                                                                    self.mobile.get(),
+                                                                                    self.password.get()
+                                                                             ))
+                messagebox.showinfo("User Registered", "User registered successfully.")
+            conn.commit()
+            conn.close()
 
 
 
