@@ -51,21 +51,7 @@ class Attendance:
         update = Button(left_frame, text = "Update", font=("Aerial", 25, "bold"), command = self.update ,background="#008080", activebackground= "#ffdab9", fg="white", relief=RAISED, bd = 15,activeforeground="black")
         update.place(x=-1, y=448, height=75, width=365)
 
-        reset = Button(left_frame, text = "Reset", font=("Aerial", 25, "bold"), command = self.reset, background="#008080", activebackground= "#ffdab9", fg="white", relief=RAISED, bd = 15,activeforeground="black")
-        reset.place(x=364, y=448, height=75, width=365)
 
-        import1 = Button(left_frame, text = "Import File",command = self.importCsv, font=("Aerial", 25, "bold"), background="#008080", activebackground= "#ffdab9", fg="white", relief=RAISED, bd = 15,activeforeground="black")
-        import1.place(x=-1, y=523, height=75, width=365)
-
-        export = Button(left_frame, text = "Export File", pady = 0,command = self.export_csv, font=("Aerial", 25, "bold"), background="#008080", activebackground= "#ffdab9", fg="white", relief=RAISED, bd = 15,activeforeground="black")
-        export.place(x=364, y = 523, height=75, width=365)
-
-        arrow = Image.open("Images\\Left_Arrow.png")
-        arrow = arrow.resize((100,68))
-        self.arrow = ImageTk.PhotoImage(arrow)
-
-        previous = Button(self.window, image = self.arrow, background="#ffdab9", borderwidth=0, activebackground = "#ffdab9", command = self.back)#"#ffdab9")
-        previous.place(x = 0, y = 0)
 
 
         # Comboboxes
